@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clock </title>
+    <style>
+        *{
+            margin : 0;
+            padding : 0 ;
+            box-sizing: border-box;
+        }
+        .clock{
+            width: 800px;
+            height: 800px;
+            border: 3px solid #060606;
+            border-radius: 50%;
+            margin : 100px auto;
+            position: relative;
+        }
+        .clock span {
+            display: inline-block;
+            font-weight: 800;
+            font-size : 20px;
+            
+        }
+        .clock span.zero{
+            transform: translate(400px,-30px)  ;
+        }
+        .clock span.one{
+            transform: translate(600px,25px)  ;
+        }
+        .clock span.two {
+            transform: translate(700px,135px);
+        }
+        .clock span.three {
+            transform: translate(750px,250px);
+        }
+        .four {
+            transform: translate(750px,450px);
+        }
+        .five {
+            transform: translate(670px,620px);
+        }
+        .six {
+            transform : translate(330px , 800px);
+        }
+        .seven {
+            transform: translate(0px , 700px);
+        }
+        .eight{
+            transform: translate(-110px , 550px);
+        }
+        .nine{
+            transform: translate(-170px , 380px);
+        }
+        .ten {
+            transform: translate(-170px , 200px);
+        }
+        .eleven {
+
+        }
+        .millisecond{
+            width: 3px;
+            height: 400px;
+            background-color: blue;
+            position: absolute;
+            left: 400px;
+            top :0px;
+            animation : second 1s  infinite ;
+
+        }
+        .second {
+            width: 3px;
+            height: 400px;
+            background-color: black;
+            position: absolute;
+            left: 400px;
+            top :0px;
+            animation : second 60s  infinite;
+        }
+        .minute{
+            width: 3px;
+            height: 400px;
+            background-color: green;
+            position: absolute;
+            left: 400px;
+            top :0px;
+            animation : second 3600s  infinite;
+        }
+
+        @keyframes second {
+            from { transform:   rotate(0deg) ; transform-origin: bottom left; }
+            to {  transform: rotate(360deg) ; transform-origin: bottom left;}
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <span class="zero"> 0 </span>
+        <span class="one">1 </span>
+        <span class="two">2 </span>
+        <span class="three"> 3 </span>
+        <span class="four"> 4</span>
+        <span class="five"> 5</span>
+        <span class="six">6</span>
+        <span class="seven">7</span>
+        <span class="eight">8</span>
+        <span class="nine">9</span>
+        <span class="ten">10</span>
+        <span class="eleven">11</span>
+        
+        <div class="millisecond"> msec</div>
+        <div class="second"> sec </div>
+        <div class="minute"> minute </div>
+
+    </div>
+</body>
+</html>
